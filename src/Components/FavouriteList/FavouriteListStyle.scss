@@ -1,0 +1,103 @@
+@import '../../Styles/colors';
+@import '../../Styles/sizes';
+
+$fav-top-indent: 88px;
+
+.Favorite {
+  grid-area: favourites;
+  background: $grey-light;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+.Favorite_title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  color: $grey-dark;
+  margin: $indent-m $indent-m $indent-s;
+}
+
+.Favorite_list {
+  display: flex;
+  flex-direction: column;
+  margin: 0 $indent-m 0;
+  overflow-y: auto;
+}
+
+.Favorite_item {
+  background: $white;
+  border-radius: 10px;
+  box-shadow: $shadow;
+  max-height: max-content;
+  width: auto;
+  min-width: 360px;
+}
+
+.Favorite_item svg.color {
+  fill: $grey-light;
+}
+
+.Favorite_item svg.heart {
+  right: $indent-s;
+  top: $indent-s;
+}
+
+.Favorite_item svg .circle {
+  fill: $grey-light;
+}
+
+.Favorite_item .JokeItem__category {
+  display: none;
+}
+
+@media (max-width: 920px) {
+  .Favorite_title {
+    display: none;
+  }
+
+  .Favorite {
+    padding-top: $fav-top-indent;
+    position: absolute;
+    width: 60vw;
+    height: 100%;
+    top: 0;
+    right: 0;
+    overflow: auto;
+    z-index: 1;
+  }
+
+  .Favorite--open {
+    display: none;
+  }
+
+  .Favorite::after {
+    position: fixed;
+    content: '';
+    top: 0;
+    right: 0;
+    opacity: .8;
+    background: linear-gradient(to bottom, $grey-light 90%, rgba($grey-light, .1));
+    width: inherit;
+    height: $fav-top-indent;
+  }
+
+  .Favorite_list {
+    overflow-y: unset;
+  }
+}
+
+@media (max-width: 750px) {
+  .Favorite {
+    width: 100vw;
+  }
+
+  .Favorite_list {
+    margin: 0 $indent-s $indent-s;
+  }
+
+  .Favorite_item {
+    min-width: unset;
+  }
+}

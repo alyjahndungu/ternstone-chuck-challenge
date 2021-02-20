@@ -1,0 +1,46 @@
+@import '../../Styles/colors';
+@import '../../Styles/sizes';
+
+.Jokes {
+  height: 49vh;
+  overflow: auto;
+  position: relative;
+}
+
+.Jokes__list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+  flex-basis: 40vh;
+  overflow: visible;
+}
+
+.Jokes__item {
+  background: $grey-light;
+  border-radius: 20px;
+  max-width: 900px;
+  height: auto;
+}
+
+.Jokes__item svg.heart {
+  right: $indent-m;
+  top: $indent-m;
+}
+
+.Jokes__item svg .circle {
+  fill: $white;
+}
+
+.Jokes__item .JokeItem__wrapper {
+  margin: 67px $indent-m 45px;
+}
+
+.Jokes__item .JokeItem__text {
+  margin-bottom: 28px;
+}
+
+@media (max-width: 750px) {
+  .Jokes {
+    height: 38vh;
+  }
+}

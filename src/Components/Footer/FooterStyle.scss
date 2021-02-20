@@ -1,0 +1,19 @@
+@import '../../Styles/colors';
+@import '../../Styles/sizes';
+
+.Footer {
+  grid-area: footer;
+  position: absolute;
+  bottom: $indent-s;
+  left: 0;
+  width: max-content;
+  background: rgba($grey-light, .8);
+}
+
+.Footer__text {
+  color: $grey-dark;
+  font-weight: 300;
+  font-size: $font-s;
+  line-height: 1.4;
+  padding: $indent-s / 2 $indent-s;
+}

@@ -1,0 +1,139 @@
+@import '../../Styles/colors';
+@import '../../Styles/sizes';
+
+.JokeItem {
+  position: relative;
+  margin-bottom: $indent-s;
+}
+
+.JokeItem:last-child {
+  margin-bottom: ($indent-s * 3);
+}
+
+.JokeItem__wrapper {
+  display: flex;
+  align-items: flex-start;
+  margin: 47px $indent-s $indent-s $indent-s;
+}
+
+.JokeItem__icons {
+  margin-right: $indent-s;
+}
+
+.JokeItem__icons svg.heart {
+  position: absolute;
+  cursor: pointer;
+}
+
+.JokeItem__text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.JokeItem__link {
+  display: flex;
+  align-items: flex-start;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 14px;
+  cursor: pointer;
+}
+
+.JokeItem__link:hover a {
+  color: darken( $purple-light, 10% )
+}
+
+.JokeItem__link:hover svg {
+  transform: translate(2px, -2px);
+  fill: darken( $purple-light, 10% );
+}
+
+.JokeItem__link span {
+  color: $grey-dark;
+  margin-right: 2px;
+}
+
+.JokeItem__link a {
+  margin-right: 5px;
+  color: $purple-light;
+  transition: all .2s ease-in;
+}
+
+.JokeItem__link svg {
+  transition: all .2s ease-in;
+}
+
+.JokeItem__info {
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 14px;
+  color: $grey-dark;
+}
+
+.JokeItem__text {
+  color: $dark;
+  font-size: $font-xs;
+  line-height: $lh-xs;
+  font-weight: normal;
+  margin: 5px 0 $indent-s 0;
+  word-break: break-word;
+}
+
+.JokeItem__info mark {
+  background: none;
+  font-weight: 500;
+  color: currentColor;
+}
+
+.JokeItem__info-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.JokeItem__category {
+  width: max-content;
+  background: $white;
+  border-radius: 6px;
+  display: flex;
+}
+
+.JokeItem__category span {
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 6px 20px;
+}
+
+@media (max-width: 750px) {
+  .Jokes__item .JokeItem__wrapper {
+    margin: 47px 20px 20px;
+  }
+
+  .JokeItem__info-wrapper {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 500px) {
+  .JokeItem__info {
+    flex-basis: 100%;
+    margin-bottom: 10px;
+  }
+
+  .Jokes__item svg.heart {
+    right: $indent-s;
+    top: $indent-s;
+  }
+
+  .JokeItem__link a {
+    word-break: break-all;
+    width: 90%
+  }
+}
+
+

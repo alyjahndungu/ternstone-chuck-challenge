@@ -1,0 +1,78 @@
+@import '../../Styles/colors';
+@import '../../Styles/sizes';
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+  grid-area: header;
+  margin: $indent-m $indent-l 78px;
+}
+
+.Header__logo {
+  color: $dark-blue;
+  font-size: 20px;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.Header__menu {
+  border: none;
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+
+.Header__menu span {
+  margin-left: 10px;
+  font-size: 20px;
+  line-height: 1.4;
+  color: $grey-dark;
+}
+
+
+@media (max-width: 1200px) {
+  .Header {
+    margin: $indent-m ($indent-l / 2) 78px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .Header {
+    margin: $indent-m ($indent-l / 3.5) 78px;
+  }
+}
+
+@media (max-width: 920px) {
+  .Header__menu {
+    visibility: visible;
+    z-index: 2;
+  }
+
+  .Header-overlay {
+    position: relative;
+  }
+
+  .Header-overlay:after {
+    position: absolute;
+    content: '';
+    width: 100vw;
+    height: 200vh;
+    right: 0;
+    z-index: 1;
+    background: $background;
+  }
+}
+
+@media (max-width: 750px) {
+  .Header {
+    margin: $indent-s $indent-s 78px;
+  }
+
+  .Header:after {
+    display: none;
+  }
+}

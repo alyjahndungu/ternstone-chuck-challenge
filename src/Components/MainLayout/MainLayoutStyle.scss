@@ -1,0 +1,52 @@
+@import '../../Styles/colors';
+@import '../../Styles/sizes';
+
+.main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  margin: 0 $indent-l;
+}
+
+.main__title {
+  font-size: 24px;
+  line-height: $lh-l;
+  color: $dark;
+  font-weight: 500;
+  margin-bottom: $indent-m;
+  margin-top: 0;
+}
+
+.main__title strong {
+  font-weight: bold;
+  display: block;
+  font-size: $font-l;
+}
+
+.error {
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+}
+
+.SearchPanel+.Jokes__item.Loader {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .main {
+    margin: 0 ($indent-l / 2);
+  }
+}
+
+@media (max-width: 1000px) {
+  .main {
+    margin: 0 ($indent-l / 3.5);
+  }
+}
+
+@media (max-width: 750px) {
+  .main {
+    margin: 0 $indent-s;
+  }
+}
