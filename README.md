@@ -1,6 +1,9 @@
 # About project
 This project was created for educational purposes. 
 
+### Author
+Elijah Ndung'u Inspired by technical interview.
+
 Written using **React** and **TypeScript**.
 
 To get jokes in JSON format was used [Chuck Norris API](https://api.chucknorris.io/) 
