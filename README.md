@@ -1,8 +1,8 @@
 # About project
-This project was created for educational purposes. 
+This project was created for practice and enhancing my coding skills purposes. 
 
 ### Author
-Elijah Ndung'u Inspired by technical interview.
+Elijah Ndung'u
 
 Written using **React** and **TypeScript**.
 
@@ -22,14 +22,6 @@ Application has the following features:
 * Improve the interaction process with manual joke search(Display message that no jokes were found)
 * Add clearer typing and handling of server errors
 * Improve accessibility with more WAI-ARIA
-
-This project was bootstrapped with [Create React AppView](https://github.com/facebook/create-react-app).
-
-### Prerequisites
-
-First of all, you will need [Node.js](https://nodejs.org) of version `10.15.2` or compatible with it, [npm](https://www.npmjs.com/) version `6.14.4` or compatible, and [git](https://git-scm.com/downloads) `2.20.1` or compatible.
-
-Check if everything is OK by running `npm -v`, `node -v` and `git --version` in the CLI
 
 ## Available Scripts
 
